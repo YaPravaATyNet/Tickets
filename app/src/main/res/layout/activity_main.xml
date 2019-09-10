@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/gradient_thin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Билетики"
+        android:textStyle="bold"
+        android:textSize="@dimen/title"
+        android:textColor="@color/colorPrimaryDark" 
+        android:layout_marginVertical="@dimen/margin"/>
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Номер"
+        android:inputType="number"
+        android:textSize="@dimen/main"
+        android:textColor="@color/colorPrimaryDark"
+        android:maxLength="7"/>
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Желаемый результат"
+        android:text="100"
+        android:inputType="number"
+        android:textSize="@dimen/main"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <RadioGroup
+        android:id="@+id/power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin">
+
+        <RadioButton
+            android:id="@+id/power_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="использовать степень"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/power_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="не использовать степень"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button"
+        android:text="Проверить существование"
+        android:layout_marginVertical="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:onClick="check"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button"
+        android:text="Показать результат"
+        android:padding="@dimen/padding"
+        android:onClick="answer"/>
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginVertical="@dimen/margin"/>
+
+</android.widget.LinearLayout>
